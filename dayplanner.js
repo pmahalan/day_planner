@@ -14,11 +14,18 @@ for (var i = 0; i < plans.length; i++) {
 userinput.textContent = customized;
 //the text content of the user-input fields is going to become the content of the array.
 
-plans.addEventListener('keypress', function (e) {
+storeNewPlans();
+
+function storeNewPlans() {
+
+  localStorage.setItem("userplans", JSON.stringify(plans));
+
+  plans.addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
-    if (key === 13) { // 13 is enter
-      // code for enter
-    }
+    // code for enter
+    if (key === 13) { }
+    // 13 is enter 
+  })
 }
 
 //I want to build something that:
