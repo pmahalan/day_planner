@@ -31,24 +31,72 @@ $("document").ready(function(){
     localStorage.setItem(itemName,itemText);
 })
 
-//DELETE THE CODE BELOW IN A BIT, BECUASE I'M PRETTY SURE WE DON'TNEED IT 
-$("#savebutton9").on("click", function () {
 
-  //trying to get the closest input
-  var item = $(".description9").val();
-  //log out the item value
-  console.log("Item: ", item);
-
+  $(".description10").val(localStorage.getItem("hour10"));
+  $("#savebutton10").on("click", function () {
+    var itemText= $(".description10").val();
+    var itemName = $(".description10").attr("data-item");
+    console.log("Item: ", itemText);
+    localStorage.setItem(itemName,itemText);
 })
 
-//make buttons for each hour.
-// make click-handlers for each of them
-//save the item for each one to local storage.
-//then, get the item from local storage.
-//then, update the page with teh local storage value.
+$(".description11").val(localStorage.getItem("hour11"));
+$("#savebutton11").on("click", function () {
+  var itemText= $(".description11").val();
+  var itemName = $(".description11").attr("data-item");
+  console.log("Item: ", itemText);
+  localStorage.setItem(itemName,itemText);
+})
 
-//THEN
+$(".description12").val(localStorage.getItem("hour12"));
+$("#savebutton12").on("click", function () {
+  var itemText= $(".description12").val();
+  var itemName = $(".description12").attr("data-item");
+  console.log("Item: ", itemText);
+  localStorage.setItem(itemName,itemText);
+})
 
+$(".description1").val(localStorage.getItem("hour1"));
+$("#savebutton1").on("click", function () {
+  var itemText= $(".description1").val();
+  var itemName = $(".description1").attr("data-item");
+  console.log("Item: ", itemText);
+  localStorage.setItem(itemName,itemText);
+})
+
+$(".description2").val(localStorage.getItem("hour2"));
+$("#savebutton2").on("click", function () {
+  var itemText= $(".description2").val();
+  var itemName = $(".description2").attr("data-item");
+  console.log("Item: ", itemText);
+  localStorage.setItem(itemName,itemText);
+})
+
+$(".description3").val(localStorage.getItem("hour3"));
+$("#savebutton3").on("click", function () {
+  var itemText= $(".description3").val();
+  var itemName = $(".description3").attr("data-item");
+  console.log("Item: ", itemText);
+  localStorage.setItem(itemName,itemText);
+})
+
+$(".description4").val(localStorage.getItem("hour4"));
+$("#savebutton4").on("click", function () {
+  var itemText= $(".description4").val();
+  var itemName = $(".description4").attr("data-item");
+  console.log("Item: ", itemText);
+  localStorage.setItem(itemName,itemText);
+})
+
+$(".description5").val(localStorage.getItem("hour5"));
+$("#savebutton5").on("click", function () {
+  var itemText= $(".description5").val();
+  var itemName = $(".description5").attr("data-item");
+  console.log("Item: ", itemText);
+  localStorage.setItem(itemName,itemText);
+})
+
+//next steps (hour-coloring):
 //moment.js -- think about getting a clock on the page, the previous hours, future hours, and current hour.
 
 })
