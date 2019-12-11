@@ -12,65 +12,68 @@
 <!-- container for Moment.js output -->
 <div id="displayMoment" style="text-align: center;"></div>
 
+<!-- table -->
 <table class="table table-hover" style="margin: 50px;">
-    <thead>
 
-      <tr>
-        <th scope="col-sm-2">Time</th>
-        <th scope="col-sm-9">Plans</th>
-        <th scope="col-sm-1">Save (local)</th>
-      </tr>
+<!-- very top row (headers) -->
+    <thead> <tr> <th scope="col-sm-2">Time</th> <th scope="col-sm-9">Plans</th> <th scope="col-sm-1">Save (local)</th> </tr> </thead>
 
-    </thead>
+<!-- opening tbody tag-->
     <tbody>
-      <tr> <th scope="row">9 a.m.</th> 
-        <td> 
-          <form id="usersplans9"> 
-            <input data-item="hour9" class="description9" type="text"/> 
-          </form> 
-        </td> 
-        <td> 
-          <button id="savebutton9" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button>
-        </td> 
-      </tr>
 
-      <tr> <th scope="row">10 a.m.</th>
-        <td> <form id="usersplans10"> <input class="description" type="text"/> </form> </td> </tr>
+          <!-- - -->
+          <tr> <th scope="row">9 a.m.</th> 
+            <td> <form> <input data-item="hour9" class="description9" type="text"/> </form> </td> 
+            <td> <button id="savebutton9" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">10 a.m.</th> 
+            <td> <form> <input data-item="hour10" class="description9" type="text"/> </form> </td> 
+            <td> <button id="savebutton10" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">11 a.m.</th> 
+            <td> <form> <input data-item="hour11" class="description11" type="text"/> </form> </td> 
+            <td> <button id="savebutton11" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">12 p.m.</th> 
+            <td> <form> <input data-item="hour12" class="description12" type="text"/> </form> </td> 
+            <td> <button id="savebutton12" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">1 p.m.</th> 
+            <td> <form> <input data-item="hour1" class="description1" type="text"/> </form> </td> 
+            <td> <button id="savebutton1" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">2 p.m.</th> 
+            <td> <form> <input data-item="hour2" class="description2" type="text"/> </form> </td> 
+            <td> <button id="savebutton2" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">3 p.m.</th> 
+            <td> <form> <input data-item="hour3" class="description3" type="text"/> </form> </td> 
+            <td> <button id="savebutton3" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">4 p.m.</th> 
+            <td> <form> <input data-item="hour4" class="description4" type="text"/> </form> </td> 
+            <td> <button id="savebutton4" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
+          <!-- - -->
+          <tr> <th scope="row">5 p.m.</th> 
+            <td> <form> <input data-item="hour5" class="description5" type="text"/> </form> </td> 
+            <td> <button id="savebutton5" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button> </td> 
+          </tr>
 
-      <tr> <th scope="row">11 a.m.</th>
-        <td> <form id="usersplans11"> <input type="text"/> </form> </td> </tr>
-
-      <tr> <th scope="row">12 p.m.</th>
-        <td> <form id="usersplans12"> <input type="text"/> </form> </td> </tr>
-
-      <tr> <th scope="row">1 p.m.</th>
-        <td> <form id="usersplans1"> <input type="text"/> </form> </td> </tr>
-
-      <tr> <th scope="row">2 p.m.</th>
-        <td> <form id="usersplans2"> <input type="text"/> </form> </td> </tr>
-
-      <tr> <th scope="row">3 p.m.</th>
-        <td> <form id="usersplans3"> <input type="text"/> </form> </td> </tr>
-
-      <tr> <th scope="row">4 p.m.</th> 
-        <td> <form id="usersplans4"> <input type="text"/> </form> </td> </tr>
-
-      <tr> <th scope="row">5 p.m.</th> 
-        <td> <form id="usersplans5"> <input type="text"/> </form> </td> </tr>
-
-    </tbody>
+  </tbody>
   </table>
 
-<!-- NOW, -->
-<!-- Since there need to be a way for the user to 1. input some type of text, and 2. commit that to their local storage,-->
-<!-- Your approach might be to CREATE AN EMPTY ARRAY, and then -->
 
-
-<script
-src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="dayplanner.js"></script>
 <script src = "moment.min.js"></script>
+
 </body>
 </html>
