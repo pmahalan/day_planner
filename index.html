@@ -7,31 +7,35 @@
 <script src = "moment.min.js"></script>
 
 
-<h2 style="text-align: center; margin: 50px;">Moment Date</h2>
+<h2 style="text-align: center; margin: 50px;">Work Day Scheduler</h2>
+<p style="text-align: center;"> An hour-by-hour table for managing your workday!</p>
 <!-- container for Moment.js output -->
 <div id="displayMoment" style="text-align: center;"></div>
 
-<table class="table table-hover">
+<table class="table table-hover" style="margin: 50px;">
     <thead>
       <tr>
-        <th scope="col">Time</th>
-        <th scope="col">Plans</th>
-        <th scope="col">Save (local)</th>
+        <th scope="col-sm-2">Time</th>
+        <th scope="col-sm-9">Plans</th>
+        <th scope="col-sm-1">Save (local)</th>
       </tr>
     </thead>
     <tbody>
-      <tr> <th scope="row">9 a.m.</th> </tr>
-      <tr> <th scope="row">10 a.m.</th> </tr>
-      <tr> <th scope="row">11 a.m.</th> </tr>
-      <tr> <th scope="row">12 p.m.</th> </tr>
-      <tr> <th scope="row">1 p.m.</th> </tr>
-      <tr> <th scope="row">2 p.m.</th> </tr>
-      <tr> <th scope="row">3 p.m.</th> </tr>    
-      <tr> <th scope="row">4 p.m.</th> </tr>     
-      <tr> <th scope="row">5 p.m.</th> </tr>     
+      <tr> <th scope="row" class="9am">9 a.m.</th> </tr>
+      <tr> <th scope="row" class="10am">10 a.m.</th> </tr>
+      <tr> <th scope="row" class="11am">11 a.m.</th> </tr>
+      <tr> <th scope="row" class="12pm">12 p.m.</th> </tr>
+      <tr> <th scope="row" class="1pm">1 p.m.</th> </tr>
+      <tr> <th scope="row" class="2pm">2 p.m.</th> </tr>
+      <tr> <th scope="row" class="3pm">3 p.m.</th> </tr>    
+      <tr> <th scope="row" class="4pm">4 p.m.</th> </tr>     
+      <tr> <th scope="row" class="5pm">5 p.m.</th> </tr>     
     </tbody>
   </table>
 
+<!-- NOW, -->
+<!-- Since there need to be a way for the user to 1. input some type of text, and 2. commit that to their local storage,-->
+<!-- Your approach might be to CREATE AN EMPTY ARRAY, and then -->
 
 <script type="text/javascript">
 console.log(moment());
@@ -51,6 +55,6 @@ console.log(moment());
 
 </script>
 
+<script src="dayplanner.js"></script>
 </body>
-
 </html>
