@@ -1,3 +1,4 @@
+//variables to hook into each hour's input form.
 var userinput9 = document.querySelector("#userplans9");
 var userinput10 = document.querySelector("#userplans10");
 var userinput11 = document.querySelector("#userplans11");
@@ -7,39 +8,26 @@ var userinput2 = document.querySelector("#userplans2");
 var userinput3 = document.querySelector("#userplans3");
 var userinput4 = document.querySelector("#userplans4");
 var userinput5 = document.querySelector("#userplans5");
-//variables to hook into each hour's input form.
 
+//clears userinput element. (Do we need this???)
 userinput.innerHTML = "";
-//clears userinput element
 
-
+//our empty array, which we want the users' input to be appended to.
+//Do we really need to do this though???
+//Isn't possible to code this so that the user input is saved to local storage for that form area, and we don't need an array???
 var plans = [];
-//our empty array which we want the users' input to be appended to.
 
-function update {
-    for (var i = 0; i < plans.length; i++) {
-        var customized = plans[i];
-        //rethingk above
-    }
-}
-//for each index populated in the array, we have a variable called 'customized'[i]
-//this is what each entry of user input will become.
+//calling the function we write out next.
+storenine();
 
-userinput.textContent = customized;
-//the text content of the user-input fields is going to become the content of the array.
-
-storeNewPlans();
-
-function storeNewPlans() {
-
-  localStorage.setItem("userplans", JSON.stringify(plans));
-
-  customized.addEventListener('keypress', function (e) {
-    var key = e.which || e.keyCode;
-    // code for enter
-    if (key === 13) { }
-    // 13 is enter 
-  })
+  function storenine() {
+    localStorage.setItem("userplans9", JSON.stringify(???));
+    customized.addEventListener('keypress', function (e) {
+      var key = e.which || e.keyCode;
+      // code for enter
+      if (key === 13) { }
+      // 13 is enter 
+    })
 }
 
 //I want to build something that:
