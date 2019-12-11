@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>
-    <title>Day Planner!</title>
-</head>
+<head> <title>Day Planner!</title> </head>
 
 <body>
-  <!-- reference Moment.js library -->
-  <script src="moment.min.js"></script>
-  <script type="text/javascript">
-
-  console.log(moment());
+<script src = "moment.min.js"></script>
 
 
+<h2>Moment Date</h2>
+<!-- container for Moment.js output -->
+<div id="displayMoment"></div>
+
+
+<script type="text/javascript">
+console.log(moment());
+
+(function()
+{
+  // instantiate a moment object
+  var NowMoment = moment();
+  // display value of moment object in #displayMoment div
+  var eDisplayMoment = document.getElementById('displayMoment');
+  eDisplayMoment.innerHTML = NowMoment.format('YYYY-M-D');
+  
+  // instantiate a JavaScript Date object
+  var NowDate = new Date();
+  
+})();
 </script>
 
 </body>
