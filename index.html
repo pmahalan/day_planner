@@ -11,6 +11,27 @@
 <!-- container for Moment.js output -->
 <div id="displayMoment" style="text-align: center;"></div>
 
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Plans</th>
+        <th scope="col">Save (local)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr> <th scope="row">9 a.m.</th> </tr>
+      <tr> <th scope="row">10 a.m.</th> </tr>
+      <tr> <th scope="row">11 a.m.</th> </tr>
+      <tr> <th scope="row">12 p.m.</th> </tr>
+      <tr> <th scope="row">1 p.m.</th> </tr>
+      <tr> <th scope="row">2 p.m.</th> </tr>
+      <tr> <th scope="row">3 p.m.</th> </tr>    
+      <tr> <th scope="row">4 p.m.</th> </tr>     
+      <tr> <th scope="row">5 p.m.</th> </tr>     
+    </tbody>
+  </table>
+
 
 <script type="text/javascript">
 console.log(moment());
@@ -21,12 +42,13 @@ console.log(moment());
   var NowMoment = moment();
   // display value of moment object in #displayMoment div
   var eDisplayMoment = document.getElementById('displayMoment');
-  eDisplayMoment.innerHTML = NowMoment.format('YYYY-M-D');
+  eDisplayMoment.innerHTML = NowMoment.format('MMMM Do YYYY, h:mm:ss a');
   
   // instantiate a JavaScript Date object
   var NowDate = new Date();
   
 })();
+
 </script>
 
 </body>
