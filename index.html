@@ -4,7 +4,7 @@
 
 <body>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src = "moment.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
 
 <h2 style="text-align: center; margin: 50px;">Work Day Scheduler</h2>
@@ -24,10 +24,18 @@
     </thead>
     <tbody>
       <tr> <th scope="row">9 a.m.</th> 
-        <td> <form id="usersplans9"> <input type="text"/> </form> </td> </tr>
+        <td> 
+          <form id="usersplans9"> 
+            <input data-item="hour9" class="description9" type="text"/> 
+          </form> 
+        </td> 
+        <td> 
+          <button id="savebutton9" class="btn btn-info btn-lg"> <i class="fas fa-save"></i> </button>
+        </td> 
+      </tr>
 
       <tr> <th scope="row">10 a.m.</th>
-        <td> <form id="usersplans10"> <input type="text"/> </form> </td> </tr>
+        <td> <form id="usersplans10"> <input class="description" type="text"/> </form> </td> </tr>
 
       <tr> <th scope="row">11 a.m.</th>
         <td> <form id="usersplans11"> <input type="text"/> </form> </td> </tr>
@@ -57,24 +65,12 @@
 <!-- Since there need to be a way for the user to 1. input some type of text, and 2. commit that to their local storage,-->
 <!-- Your approach might be to CREATE AN EMPTY ARRAY, and then -->
 
-<script type="text/javascript">
-console.log(moment());
 
-(function()
-{
-  // instantiate a moment object
-  var NowMoment = moment();
-  // display value of moment object in #displayMoment div
-  var eDisplayMoment = document.getElementById('displayMoment');
-  eDisplayMoment.innerHTML = NowMoment.format('MMMM Do YYYY, h:mm:ss a');
-  
-  // instantiate a JavaScript Date object
-  var NowDate = new Date();
-  
-})();
-
-</script>
-
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
 <script src="dayplanner.js"></script>
+<script src = "moment.min.js"></script>
 </body>
 </html>

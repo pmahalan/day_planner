@@ -1,35 +1,51 @@
-//variables to hook into each hour's input form.
-var userinput9 = document.querySelector("#userplans9");
-var userinput10 = document.querySelector("#userplans10");
-var userinput11 = document.querySelector("#userplans11");
-var userinput12 = document.querySelector("#userplans12");
-var userinput1 = document.querySelector("#userplans1");
-var userinput2 = document.querySelector("#userplans2");
-var userinput3 = document.querySelector("#userplans3");
-var userinput4 = document.querySelector("#userplans4");
-var userinput5 = document.querySelector("#userplans5");
+$("document").ready(function(){
+  //update the page with the values from local storage
+  $(".description9").val(localStorage.getItem("hour9"));
 
-//clears userinput element. (Do we need this???)
-userinput.innerHTML = "";
+(function()
+{
+  // instantiate a moment object
+  var NowMoment = moment();
+  // display value of moment object in #displayMoment div
+  var eDisplayMoment = document.getElementById('displayMoment');
+  eDisplayMoment.innerHTML = NowMoment.format('MMMM Do YYYY, h:mm:ss a');
+  
+  // instantiate a JavaScript Date object
+  var NowDate = new Date();
+  
+})();
 
-//our empty array, which we want the users' input to be appended to.
-//Do we really need to do this though???
-//Isn't possible to code this so that the user input is saved to local storage for that form area, and we don't need an array???
-var plans = [];
 
-//calling the function we write out next.
-storenine();
+//when we click the button, we need to get the value from the day input field.
+$("#savebutton9").on("click", function () {
+  //get the value of the corresponding input.
+  var itemText= $(".description9").val();
+  var itemName = $(".description9").attr("data-item");
+  //log out the item value
+  console.log("Item: ", itemText );
+  //get the id for the name to get it back to put it on the page
+  //get the value of the textarea to set as the value
+  //save to local storage
+  localStorage.setItem(itemName,itemText);
+})
 
-  function storenine() {
-    localStorage.setItem("userplans9", JSON.stringify(???));
-    customized.addEventListener('keypress', function (e) {
-      var key = e.which || e.keyCode;
-      // code for enter
-      if (key === 13) { }
-      // 13 is enter 
-    })
-}
+$("#savebutton9").on("click", function () {
 
-//I want to build something that:
-//Upon the user's typing something in a field and hitting "enter",
-//The stuff they've entered is committed to the local memory. Most likely through an array.
+  //trying to get the closest input
+  var item = $(".description9").val();
+  //log out the item value
+  console.log("Item: ", item);
+
+})
+
+//make buttons for each hour.
+// make click-handlers for each of them
+//save the item for each one to local storage.
+//then, get the item from local storage.
+//then, update the page with teh local storage value.
+
+//THEN
+
+//moment.js -- think about getting a clock on the page, the previous hours, future hours, and current hour.
+
+})
