@@ -1,6 +1,6 @@
 # My Day Planner
 
-In the Day Planner assignment, I was able to build a website which practiced utilizing local memory storage. Additionally, I had an opportunit to use libraries such as jQuery and moments.js for the first time.
+In the Day Planner application, I was able to build a website which practiced utilizing local memory storage. Additionally, I had an opportunit to use libraries such as jQuery and moments.js for the first time.
 
 The site consists of a table which displays horizontal rows for each hour of the work day, beginning with 9 a.m. and ending with 5 p.m. In addition to denoting the hour, each row contains a form for user input and a "save" button. Once the user inputs their plans for any given hour, that input is saved to their browser's local storage when they click the "save" button. I was able to accomplish this functionality through the use of jQuery methods. 
 
